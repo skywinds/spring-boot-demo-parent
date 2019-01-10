@@ -10,4 +10,8 @@ public interface IUserInfoService {
     List<UserInfo> getAllUsersInfo();
 
     UserInfo addUserInfo(UserInfo info);
+
+    UserInfo updateUserInfo(UserInfo info);
+
+    void deleteUserInfo(Integer id);
 }

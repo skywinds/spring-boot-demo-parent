@@ -32,4 +32,11 @@ public interface IUserInfoDao {
     @SelectKey(statement = "select last_insert_id()", before = false, keyColumn = "user_id", resultType = int.class, keyProperty = "id")
     @Insert("INSERT INTO tbl_user (user_name, user_email) VALUES (#{name},#{email})")
     int addUserInfo(UserInfo info);
+
+
+    @Delete("delete from tbl_user where user_id = #{id}")
+    void deleteUserInfo(Integer id);
+
+    @Update("update tbl_user set user_name=#{name},user_email=#{email} where user_id =#{id}")
+    void updateUserInfo(UserInfo info);
 }

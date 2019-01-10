@@ -3,10 +3,7 @@ package com.sas.sbdcc.controller;
 import com.sas.sbdcc.model.UserInfo;
 import com.sas.sbdcc.service.IUserInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -30,5 +27,17 @@ public class UserInfoController {
     public UserInfo addUserInfo(UserInfo info) {
         return userInfoService.addUserInfo(info);
     }
+
+    @PutMapping("/user")
+    public UserInfo updateUserInfo(UserInfo info){
+        return userInfoService.updateUserInfo(info);
+    }
+
+    @DeleteMapping("/user/{id}")
+    public String deleteUserInfo(@PathVariable("id") Integer id){
+        userInfoService.deleteUserInfo(id);
+        return "ok";
+    }
+
 
 }
