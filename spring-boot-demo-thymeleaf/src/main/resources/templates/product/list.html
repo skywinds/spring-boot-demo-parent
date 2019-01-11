@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- CSS -->
+    <link href="/webjars/bootstrap/4.2.1/css/bootstrap.min.css" th:href="@{/webjars/bootstrap/4.2.1/css/bootstrap.min.css}" rel="stylesheet">
+    <!-- js -->
+    <script src="/webjars/jquery/3.3.1/jquery.min.js" th:src="@{/webjars/jquery/3.3.1/jquery.min.js}"></script>
+</head>
+<body>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="product:${list}">
+        <td th:text="${product.prduId}">prduId</td>
+        <td th:text="${product.appId}">appId</td>
+        <td th:text="${product.name}">name</td>
+        <td th:text="${product.shortName}">shortName</td>
+        <td th:text="${product.desc}">desc</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
