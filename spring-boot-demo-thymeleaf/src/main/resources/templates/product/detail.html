@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- CSS -->
+    <link href="/webjars/bootstrap/4.2.1/css/bootstrap.min.css"
+          th:href="@{/webjars/bootstrap/4.2.1/css/bootstrap.min.css}" rel="stylesheet">
+    <!-- js -->
+    <script src="/webjars/jquery/3.3.1/jquery.min.js" th:src="@{/webjars/jquery/3.3.1/jquery.min.js}"></script>
+</head>
+<body>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td th:text="${detail.prduId}">prduId</td>
+        <td th:text="${detail.appId}">appId</td>
+        <td th:text="${detail.name}">name</td>
+        <td th:text="${detail.shortName}">shortName</td>
+        <td th:text="${detail.desc}">desc</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

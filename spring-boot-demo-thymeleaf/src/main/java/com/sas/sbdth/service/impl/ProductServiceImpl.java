@@ -18,4 +18,9 @@ public class ProductServiceImpl implements IProductService {
         result.add(new ProductInfo(3L, "103", "ATP", "ATP描述", "ATP"));
         return result;
     }
+
+    @Override
+    public ProductInfo getProduct(Integer id) {
+        return new ProductInfo(4L, "104", "ATF", "ATF描述", "ATF");
+    }
 }

@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface IProductService {
     List<ProductInfo> findByPage(ProductInfo info);
+
+    ProductInfo getProduct(Integer id);
 }
